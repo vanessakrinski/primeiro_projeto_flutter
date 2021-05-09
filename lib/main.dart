@@ -45,13 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              'Clicou aqui :',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
+            CircularProgressIndicator()
           ],
         ),
       ),
@@ -59,7 +53,11 @@ class _MyHomePageState extends State<MyHomePage> {
         onPressed: _incrementCounter,
         tooltip: 'Increment',
         child: Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      ),
+      bottomNavigationBar: Container(height: 50, width: 50, color: Colors.amber, child: Center(child:Text(
+        '$_counter',
+        style: Theme.of(context).textTheme.headline4,
+      ),),)
     );
   }
 }
