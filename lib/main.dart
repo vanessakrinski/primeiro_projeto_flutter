@@ -10,11 +10,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter',
       theme: ThemeData(
-        primarySwatch: Colors.purple,
+        primarySwatch: Colors.red,
       ),
       home: MyHomePage(title: 'App da Dorinha'),
     );
   }
+
 }
 
 class MyHomePage extends StatefulWidget {
