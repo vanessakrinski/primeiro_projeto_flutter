@@ -8,14 +8,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter',
       theme: ThemeData(
-        primarySwatch: Colors.red,
+        primarySwatch: Colors.amber,
       ),
       home: MyHomePage(title: 'App da Dori'),
     );
   }
-
 }
 
 class MyHomePage extends StatefulWidget {
@@ -37,28 +37,38 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   @override
+
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            CircularProgressIndicator()
-          ],
+        appBar: AppBar(
+          title: Text(widget.title),
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
-      ),
-      bottomNavigationBar: Container(height: 50, width: 50, color: Colors.amber, child: Center(child:Text(
-        '$_counter',
-        style: Theme.of(context).textTheme.headline4,
-      ),),)
-    );
+        body: Center(
+          child: RaisedButton.icon(
+              onPressed: () {},
+              icon: Icon(
+                Icons.car_rental
+          ), label: Text('Clique'),
+            color: Colors.deepPurple,
+
+          )
+        ),
+
+        floatingActionButton: FloatingActionButton(
+          onPressed: _incrementCounter,
+          tooltip: 'Increment',
+          child: Icon(Icons.money),
+        ),
+        bottomNavigationBar: Container(
+          height: 50,
+          width: 50,
+          color: Colors.purpleAccent,
+          child: Center(
+            child: Text(
+              '$_counter',
+              style: Theme.of(context).textTheme.headline4,
+            ),
+          ),
+        ));
   }
 }
